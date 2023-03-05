@@ -120,15 +120,7 @@ server <- function(input, output) {
         }
       ) %>% 
       arrange(Year) %>% 
-      mutate(
-        Netflix = NULL,
-        Hulu = NULL,
-        `Prime Video` = NULL,
-        `Disney+` = NULL,
-        Type = NULL,
-        `...1` = NULL,
-        ID = NULL
-      )
+      select(Title, Year, Age, `Rotten Tomatoes`)
   })
   
   output$table_description <- renderText({
