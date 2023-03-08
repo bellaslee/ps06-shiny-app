@@ -94,7 +94,7 @@ server <- function(input, output) {
     
     ggplot(filtered) +
       geom_bar(mapping = aes(x = filtered$Year), stat = "count", fill = input$fill) +
-      labs(title = paste("Movies by Year on", input$plot_year),
+      labs(title = paste("Movies by Year on", input$plot_service),
            x = "Year",
            y = "Movie count")
   })
